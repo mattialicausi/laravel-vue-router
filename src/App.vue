@@ -1,10 +1,10 @@
 <template>
 
   <HeaderComponent></HeaderComponent>
-  <router-view></router-view>
 
-  <main>
-    Sono il main
+
+  <main class="container">
+    <router-view></router-view>
   </main>
 
 </template>
