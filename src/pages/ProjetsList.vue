@@ -8,7 +8,8 @@
             <div class="card-body">
                 <h5 class="card-title">{{project.title}}</h5>
                 <p class="card-text">{{ truncateText(project.description) }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+               
+               <router-link class="btn btn-primary" :to="{name: 'single-project', params: {slug: project.slug}}">More...</router-link>
             </div>
         </div>
     </div>
