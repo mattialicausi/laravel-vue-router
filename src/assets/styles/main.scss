@@ -7,5 +7,75 @@ $main-font: 'Montserrat', sans-serif;
 $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
-
 @import 'bootstrap/scss/bootstrap';
+
+
+// general 
+#container-navbar {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.093) 0%,rgba(0, 0, 0, 0.091) 50%, rgba(0, 0, 0, 0.023) 100%);
+    justify-content: space-around;
+
+    #container-img-navbar img{
+        height: 5rem;
+    }
+
+    #container-bars {
+
+        height: 5rem;
+        width: 5rem;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 20px 20px 20px;
+
+        &:hover {
+            cursor: pointer;
+
+            .my-bar1, .my-bar3 {
+                width: 60%;
+                transition: 200ms ease-in-out;
+            };
+
+            .my-bar2 {
+                width: 80%;
+                transition: 200ms ease-in-out;
+            };
+        }
+
+        .my-bar1 {
+            width: 80%;
+            background-color: $black;
+            height: 3px;
+            transition: 200ms ease-in-out;
+        }
+
+        .my-bar2 {
+            width: 100%;
+            background-color: $black;
+            height: 3px;
+            transition: 200ms ease-in-out;
+        }
+
+        .my-bar3 {
+            width: 80%;
+            background-color: $black;
+            height: 3px;
+            transition: 200ms ease-in-out;
+        }
+    }
+
+    #container-options {
+        display: none;
+    }
+}
+
+

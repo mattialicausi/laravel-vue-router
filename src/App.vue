@@ -1,11 +1,18 @@
 <template>
 
-  <HeaderComponent></HeaderComponent>
+
+<div id="my-container">
+
+    <HeaderComponent></HeaderComponent>
 
 
-  <main class="container">
-    <router-view></router-view>
-  </main>
+    <main class="container">
+       <router-view></router-view>
+    </main>
+  
+</div>
+
+ 
 
 </template>
 

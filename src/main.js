@@ -6,7 +6,4 @@ import './assets/styles/main.scss'
 
 
 
-
-
-
 createApp(App).use(router).mount('#app')
