@@ -78,4 +78,17 @@ $fa-font-path: '../webfonts';
     }
 }
 
+// effects for navbar 
+.top-bar {
+    transform: rotate(50deg);
+    width: 100%;
+    transition: 200ms ease-in-out;
+}
+
+.bottom-bar {
+    transform: rotate(130deg);
+    width: 100%;
+    transition: 200ms ease-in-out;
+}
+
 

@@ -26,10 +26,10 @@
             <img class="w-100" src="../../public/img/logo-portfolio_adobe_express.svg" alt="img logo">
         </div>
 
-        <div id="container-bars" @click="openHamburger()">
-            <div class="my-bar1 rounded-pill"></div>
-            <div class="my-bar2 rounded-pill"></div>
-            <div class="my-bar3 rounded-pill"></div>
+        <div id="container-bars" :class="hamburgerOpen == true ? 'justify-content-center align-items-center' : '' " @click="openHamburger()">
+            <div class="my-bar1 rounded-pill" :class="hamburgerOpen == true ? 'top-bar' : '' "></div>
+            <div class="my-bar2 rounded-pill" :class="hamburgerOpen == true ? 'd-none' : '' "></div>
+            <div class="my-bar3 rounded-pill" :class="hamburgerOpen == true ? 'bottom-bar' : '' "></div>
         </div>
 
         <div id="container-options">
@@ -66,12 +66,15 @@
                     }
                 ],
 
+                hamburgerOpen: false,
+
             }
         },
 
         methods: {
             openHamburger() {
-                console.log('funziona')
+                console.log('funziona');
+                this.hamburgerOpen = !this.hamburgerOpen;
             },
         },
     }
