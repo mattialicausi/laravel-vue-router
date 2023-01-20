@@ -27,18 +27,21 @@
         </div>
 
         <div id="container-bars" :class="hamburgerOpen == true ? 'justify-content-center align-items-center' : '' " @click="openHamburger()">
-            <div class="my-bar1 rounded-pill" :class="hamburgerOpen == true ? 'top-bar' : '' "></div>
+            <div class="my-bar1 rounded-pill" :class="hamburgerOpen == true ? 'top-bar bg-white' : '' "></div>
             <div class="my-bar2 rounded-pill" :class="hamburgerOpen == true ? 'd-none' : '' "></div>
-            <div class="my-bar3 rounded-pill" :class="hamburgerOpen == true ? 'bottom-bar' : '' "></div>
-        </div>
-
-        <div id="container-options">
-            <div class="options">Home</div>
-            <div class="options">About</div>
-            <div class="options">Contact me</div>
+            <div class="my-bar3 rounded-pill" :class="hamburgerOpen == true ? 'bottom-bar bg-white' : '' "></div>
         </div>
 
     </div>
+
+    <div class="container-options" :class="hamburgerOpen == true ? 'container-options-open open-menu' : '' ">
+        <div class="wrapper-option" :class="hamburgerOpen == true ? 'wrapper-option-open' : '' ">
+            <div class="options" :class="hamburgerOpen == true ? 'options-open' : '' ">Home</div>
+            <div class="options" :class="hamburgerOpen == true ? 'options-open' : ''" >About</div>
+            <div class="options" :class="hamburgerOpen == true ? 'options-open' : '' ">Contact me</div>
+        </div>
+    </div>
+
 </template>
 
 <script>
