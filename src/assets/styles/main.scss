@@ -7,7 +7,10 @@ $main-font: 'Montserrat', sans-serif;
 $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
 @import 'bootstrap/scss/bootstrap';
+@import url('https://fons.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
 
 body {
   font-family: $open-sans;
