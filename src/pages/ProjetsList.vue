@@ -1,8 +1,7 @@
 <template>
     <h2>Projects List</h2>
 
-
-    <div class="row">
+    <!-- <div class="row">
         <div class="card col-3" style="width: 18rem;" v-for="(project, index) in projects" :key="index">
             <img :src="`${store.imgBasePath}${project.thumb1}`" class="card-img-top" :alt="project.title">
             <div class="card-body">
@@ -13,7 +12,7 @@
             </div>
         </div>
     </div>
-    
+     -->
 </template>
 
 <script>

@@ -9,148 +9,112 @@ $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import 'bootstrap/scss/bootstrap';
 
-// body {
-//     overflow-x: hidden;
-// }
-// general 
-#container-navbar {
+
+header {
     height: 10vh;
-    position: sticky;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.093) 0%,rgba(0, 0, 0, 0.091) 50%, rgba(0, 0, 0, 0.023) 100%);
-    justify-content: space-around;
-
-    #container-img-navbar img{
-        height: 5rem;
-    }
-
-    #container-bars {
-
-        height: 5rem;
-        width: 5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px 20px 20px 20px;
-
-        &:hover {
-            cursor: pointer;
-
-            .my-bar1, .my-bar3 {
-                width: 60%;
-                transition: 400ms ease-in-out;
-            };
-
-            .my-bar2 {
-                width: 80%;
-                transition: 400ms ease-in-out;
-            };
-        }
-
-        .my-bar1 {
-            width: 80%;
-            z-index: 9999;
-            background-color: $black;
-            height: 3px;
-            transition: 400ms ease-in-out;
-        }
-
-        .my-bar2 {
-            width: 100%;
-            z-index: 9999;
-            background-color: $black;
-            height: 3px;
-            transition: 400ms ease-in-out;
-        }
-
-        .my-bar3 {
-            width: 80%;
-            z-index: 9999;
-            background-color: $black;
-            height: 3px;
-            transition: 400ms ease-in-out;
-        }
-    }
 }
 
-.container-option, .wrapper-option, .options{
-    display: none;
-}
+body{
+    // width: 100vw;
+    // height: 100vh;
+    // background-color: #212121;
+    // overflow: hidden;
+   }
+   
+   #menu{
+    //  position: fixed;
+    //  right: 2rem;
+    //  top: 2rem;
+     width: 50px;
+     height: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transition: .5s;
+     z-index: 10;
+     transition: 200ms ease-in-out;
 
-.container-options-open {
-    display: block;
-    z-index: -1;
-    position: absolute;
-    height: 80rem;
-    width: 80rem;
-    border-radius: 100%;
-    top: -80rem;
-    right: -80rem;
-    opacity: 0;
-    background-color: $green;
-    transition: 400ms ease-in-out;
+
+     &:hover {
+        padding: 3px;
+        transition: 200ms ease-in-out;
+        cursor: pointer;
+     }
+   }
+   
+   .menu-line1{
+     width: 100%;
+     height: 3px;
+     background: $black;
+     transition: .6s;
+   }
+   
+   .menu-line2{
+     width: 80%;
+     height: 3px;
+     margin-top: .7rem;
+     background: $black;
+     transition: .6s;
+   }
+   
+   .rotate{
+     transform: rotateZ(180deg)
+   }
+   .rotate1{
+     background: #212121;
+     transform: rotateZ(45deg);
+   }
+   .rotate2{
+     background: #212121;
+     width: 100%;
+     transform:  translate(0,-0.8rem) rotateZ(-45deg);
+   }
+   .nav-page1{
+     position: fixed ;
+     top:0 ;
+     left: 0;
+     background: whitesmoke;
+     width: 60%;
+     height: 70vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #212121;
+     transform: translate(0,-100%);
+     transition: .5s;
+   }
+   .nav-page1 span a{
+     padding: 1rem;
+     font-size: 2rem;
+     border-bottom: 1px solid transparent; 
+     transition: 300ms ease-in-out;
 
 
+     &:hover {
+        cursor: pointer;
+        color: $green;
+        border-bottom: 1px solid $green; 
+        transition: 300ms ease-in-out;
 
-    .wrapper-option-open {
-    display: block;
+     }
+   }
+   .nav-page2{
+     position: fixed;
+     top:0 ;
+     left: 60%;
+     background: whitesmoke;
+     width: 40%;
+     height: 70vh;
+     transition: .8s;
+     transform: translate(0,-100%);
+   }
+   
+   .transform{
+     transform: translate(0,0);
+   }
 
-        position: absolute;
-        bottom: 10rem;
-        left: 25rem;
-        display: flex;
-        flex-direction: column;
-
-        .options-open {
-    display: block;
-
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            color: $white;
-            border-bottom: 1px solid transparent;
-            width: max-content;
-            transition: 300ms ease-in-out;
-
-            &:hover {
-                border-bottom: 1px solid $white;
-                cursor: pointer;
-                transition: 300ms ease-in-out;
-            }
-        }
-    }
-}
-
-// effects for navbar 
-.top-bar {
-    transform: rotate(50deg);
-    width: 100%;
-    transition: 200ms ease-in-out;
-}
-
-.bottom-bar {
-    transform: rotate(130deg);
-    width: 100%;
-    transition: 200ms ease-in-out;
-}
-
-.bg-white {
-    background-color:white;
-}
-
-.open-menu{
-    position: absolute;
-    top: -40rem;
-    right: -40rem;
-    translate: -40rem, -40rem;
-    opacity : 1;
-    transition: 400ms ease-in-out;
-}
 
 
 

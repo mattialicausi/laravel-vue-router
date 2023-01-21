@@ -30,4 +30,8 @@ import HeaderComponent from './components/HeaderComponent.vue';
 
 <style lang="scss" scoped>
 
+.container {
+
+}
+
 </style>

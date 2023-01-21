@@ -1,47 +1,23 @@
 <template>
-    <!-- <header id="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <div class="container-img-logo emoji-gsap">
-                    <img class="w-100" src="../../public/img/logo-portfolio_adobe_express.svg" alt="img logo">
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                
-                    <ul class="navbar-nav">
-                        <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
-                            <router-link :to="{name: item.routeName}" active-class="active" class="nav-link">{{ item.label }}</router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> -->
-
-    <div id="container-navbar">
-
-        <div id="container-img-navbar">
-            <img class="w-100" src="../../public/img/logo-portfolio_adobe_express.svg" alt="img logo">
+    <header class="container d-flex align-items-center justify-content-between">
+    
+        <div class="container-img-logo h-100 emoji-gsap">
+            <img class="h-100" src="../../public/img/logo-portfolio_adobe_express.svg" alt="img logo">
         </div>
 
-        <div id="container-bars" :class="hamburgerOpen == true ? 'justify-content-center align-items-center' : '' " @click="openHamburger()">
-            <div class="my-bar1 rounded-pill" :class="hamburgerOpen == true ? 'top-bar bg-white' : '' "></div>
-            <div class="my-bar2 rounded-pill" :class="hamburgerOpen == true ? 'd-none' : '' "></div>
-            <div class="my-bar3 rounded-pill" :class="hamburgerOpen == true ? 'bottom-bar bg-white' : '' "></div>
+        <div id='menu' :class="hamburgerOpen == true ? 'rotate' : '' " @click="openHamburger()">
+            <div class='menu-line1' :class="hamburgerOpen == true ? 'rotate1' : '' "></div>
+            <div class='menu-line2' :class="hamburgerOpen == true ? 'rotate2' : '' "></div>
         </div>
 
-    </div>
-
-    <div class="container-options" :class="hamburgerOpen == true ? 'container-options-open open-menu' : '' ">
-        <div class="wrapper-option" :class="hamburgerOpen == true ? 'wrapper-option-open' : '' ">
-            <div class="options" :class="hamburgerOpen == true ? 'options-open' : '' ">Home</div>
-            <div class="options" :class="hamburgerOpen == true ? 'options-open' : ''" >About</div>
-            <div class="options" :class="hamburgerOpen == true ? 'options-open' : '' ">Contact me</div>
+        
+        <div class='nav-page1' :class="hamburgerOpen == true ? 'transform' : '' ">
+            <span v-for="(item, index) in menuItems" :key="index">
+                <router-link :to="{name: item.routeName}" active-class="active" class="nav-link" @click="openHamburger()">{{ item.label }}</router-link>
+            </span>
         </div>
-    </div>
-
+        <div class='nav-page2' :class="hamburgerOpen == true ? 'transform' : '' "></div>
+    </header>
 </template>
 
 <script>
