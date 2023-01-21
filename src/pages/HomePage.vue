@@ -3,16 +3,37 @@
         <div class="container">
             <div class="row h-100 d-flex align-items-center h-100">
                 <div class="col-6 my-flex h-100">
-                    <div class="text-uppercase my-lineheight my-fs-3 mb-3">hi there <span>👋</span> i'm</div>
-                    <h2 class="my-lineheight my-fs-1 fw-bold">Mattia</h2>
-                    <h2 class="my-lineheight my-fs-1 fw-bold">Li Causi</h2>
-                    <h4 class="my-lineheight my-fs-3">Full stack junior developer <span>😎</span></h4>
-                    <p class="my-lineheight my-fs-2">I'm a student of the Boolean Academy and I love developing front-end.</p>
-                    <button class="my-btn rounded-pill"><a href="{{url('/projects') }}">See my projects</a></button>
+
+                    <transition appear @before-enter="beforeEnter2" @enter="enter2">
+                        <div class="text-uppercase my-lineheight my-fs-3 mb-3">hi there <span>👋</span> i'm</div>
+                    </transition>
+
+                    <transition appear @before-enter="beforeEnter1" @enter="enter1">
+                        <h2 class="my-lineheight my-fs-1 fw-bold">Mattia Li Causi</h2>
+                    </transition>
+                   
+                    <transition appear @before-enter="beforeEnter2" @enter="enter2">
+                        <h4 class="my-lineheight my-fs-3">Full stack junior developer <span>😎</span></h4>
+                    </transition>
+
+
+                    <transition appear @before-enter="beforeEnter2" @enter="enter2">
+                        <p class="my-lineheight my-fs-2">I'm a student of the Boolean Academy and I love developing front-end.</p>
+                    </transition>
+
+
+                    <transition appear @before-enter="beforeEnter1" @enter="enter1">
+                        <button class="my-btn rounded-pill"><a href="{{url('/projects') }}">See my projects</a></button>
+                    </transition>
+
                 </div>
 
                 <div class="col-6 my-flex align-items-center h-100">
-                    <img src="../../public/img/my-memoji-portfolio.png" alt="image avatar">
+
+                    <transition appear @before-enter="beforeEnter2" @enter="enter2">
+                        <img src="../../public/img/my-memoji-portfolio.png" alt="image avatar">
+                    </transition>
+                    
                 </div>
             </div>
         </div>
@@ -53,8 +74,44 @@
 </template>
 
 <script>
+import  gsap  from "gsap";
+import {ref} from 'vue';
+
     export default {
         name: 'HomeComponent',
+
+        setup() {
+            const beforeEnter1 = (el) => {
+                el.style.transform = 'translateX(-300px)'
+                el.style.opacity= 0
+            }
+
+            const enter1 = (el) => {
+                gsap.to(el, {
+                    duration: 1,
+                    x: 0,
+                    opacity: 1,
+                    ease: 'bounce.out',
+                });
+            }
+
+            const beforeEnter2 = (el) => {
+                el.style.opacity= 0
+            }
+
+            const enter2 = (el) => {
+                gsap.to(el, {
+                    duration: 3,
+                    opacity: 1,
+                    ease: 'bounce.out',
+
+                });
+            }
+
+            return {beforeEnter1, enter1, beforeEnter2, enter2}
+        }
+
+        
 
     }
 </script>
