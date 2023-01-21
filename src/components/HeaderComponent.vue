@@ -1,8 +1,8 @@
 <template>
-    <header class="container d-flex align-items-center justify-content-between">
+    <header class="container d-flex align-items-center justify-content-between" id="header">
     
-        <div class="container-img-logo h-100 emoji-gsap">
-            <img class="h-100" src="../../public/img/logo-portfolio_adobe_express.svg" alt="img logo">
+        <div class="container-img-logo h-100 d-flex align-items-center">
+            <img class="h-50" src="../../public/img/MattiaLiCausiwhi (3).svg" alt="img logo">
         </div>
 
         <div id='menu' :class="hamburgerOpen == true ? 'rotate' : '' " @click="openHamburger()">

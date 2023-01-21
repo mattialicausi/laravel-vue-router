@@ -6,7 +6,7 @@
     <HeaderComponent></HeaderComponent>
 
 
-    <main class="container">
+    <main>
        <router-view></router-view>
     </main>
   
@@ -29,9 +29,5 @@ import HeaderComponent from './components/HeaderComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-
-.container {
-
-}
 
 </style>
