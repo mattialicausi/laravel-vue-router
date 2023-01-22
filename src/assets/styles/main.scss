@@ -123,24 +123,21 @@ body {
     padding: 10px;
     border: 1px solid transparent;
     background-color: $light-green;
+    color: $dark;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 600ms ease-in-out;
+    transition: color 400ms ease-in-out;
 
     &:hover {
         background-color: $dark;
         color: $light-green;
         border: 1px solid $light-green;
-        transition: 200ms linear;
+        
+        transition: background-color 400ms ease-in-out;
+        transition: color 600ms ease-in-out;
     }
 
-    a {
-        color: $dark;
-        text-decoration: none;
-        font-size: 1.5rem;
-
-        &:hover {
-            color: $light-green;
-            transition: 200ms linear;
-        }
-    }
 }
 
 // general class 
@@ -163,39 +160,45 @@ body {
 // cursor 
 
 .outline1, .outline2, .outline3, .outline4 {
-  width: 12px;
-  height: 12px;
   border-radius: 100%;
   border: 1px solid $green;
-  background-color: $green;
   position: fixed;
   top: 0;
   left: 0;
-  // z-index: 99999;
   mix-blend-mode: difference;
   transform: translate(-8px, -8px);
+
+  pointer-events: none;
+}
+
+.outline1 {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
   transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 }
 
 .outline2 {
   width: 10px;
   height: 10px;
-  background-color: $white;
-  transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+  background-color: $green;
+  transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
 
 }
 
 .outline3 {
   width: 8px;
   height: 8px;
-  transition: all 0.6s cubic-bezier(.215, .61, .355, 1);
+  background-color: transparent;
+  transition: all 0.7s cubic-bezier(.215, .61, .355, 1);
 
 }
 
 .outline4 {
   width: 4px;
   height: 4px;
-  transition: all 0.8s cubic-bezier(.215, .61, .355, 1);
+  background-color: $green;
+  transition: all 0.9s cubic-bezier(.215, .61, .355, 1);
 
 }
 
@@ -207,9 +210,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  // z-index: 99999;
   mix-blend-mode: difference;
   transform: translate(-8px, -8px);
+  pointer-events: none;
+
 }
 
 

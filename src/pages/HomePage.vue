@@ -23,7 +23,7 @@
 
 
                     <transition appear @before-enter="beforeEnter1" @enter="enter1">
-                        <button class="my-btn rounded-pill"><a href="{{url('/projects') }}">See my projects</a></button>
+                        <a class="my-btn rounded-pill" href="http://localhost:5174/projects">See my projects</a>
                     </transition>
 
                 </div>
