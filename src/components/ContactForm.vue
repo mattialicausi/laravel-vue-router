@@ -3,7 +3,7 @@
         <div class="inner-wrapper">
             <div class="container-fluid text-center">
                 <h2 class="text-uppercase text-start fw-bold">contact me</h2> 
-                <p class="py-4">I'm interested at all opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate to use the form 😉</p>
+                <p class="py-4">I'm interested at all opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate to use the form.</p>
                 <div v-if="success" class="alert alert-success text-start" role="alert">
                     Messaggio inviato con successo!
                 </div>               

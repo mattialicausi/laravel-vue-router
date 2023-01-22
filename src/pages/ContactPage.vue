@@ -3,18 +3,22 @@
         <div class="container">
             <ContactForm/>
          </div>
+
+         <SocialComponent/>
     </div>
 </template>
 
 <script>
 
 import ContactForm from '../components/ContactForm.vue';
+import SocialComponent from '../components/SocialComponent.vue';
 
     export default {
         name: 'ContactPage',
 
         components: {
             ContactForm,
+            SocialComponent
         }
 
     }
