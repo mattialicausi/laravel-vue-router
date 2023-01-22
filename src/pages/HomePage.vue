@@ -23,7 +23,7 @@
 
 
                     <transition appear @before-enter="beforeEnter1" @enter="enter1">
-                        <a class="my-btn rounded-pill" href="http://localhost:5174/projects">See my projects</a>
+                        <a class="my-btn rounded-pill" href="http://localhost:5174/projects">See my works</a>
                     </transition>
 
                 </div>

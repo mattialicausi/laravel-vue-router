@@ -32,7 +32,7 @@
                         routeName: 'home'
                     },
                     {
-                        label: 'Projects',
+                        label: 'Works',
                         routeName: 'projects'
                     },
                     {
