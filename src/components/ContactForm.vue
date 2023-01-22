@@ -2,7 +2,8 @@
     <section class="contact_me py-5">
         <div class="inner-wrapper">
             <div class="container-fluid text-center">
-                <h2 class="text-uppercase">contact me</h2> 
+                <h2 class="text-uppercase text-start fw-bold">contact me</h2> 
+                <p class="py-4">I'm interested at all opportunities especially ambitious or large projects. However, if you have other request or question, don't hesitate to use the form 😉</p>
                 <div v-if="success" class="alert alert-success text-start" role="alert">
                     Messaggio inviato con successo!
                 </div>               
@@ -31,7 +32,7 @@
                                     {{ error }}
                                 </p>
                         </div>
-                        <button class="btn btn-lg btn-primary text-white" type="submit" :disabled="loading">{{loading ? 'Sending...' : 'Send'}}</button>
+                        <button class="my-btn rounded-pill" type="submit" :disabled="loading">{{loading ? 'Sending...' : 'Send'}}</button>
                     </form>
                 </div>
             </div>
@@ -89,5 +90,18 @@ import {store} from '../store';
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/main.scss';
+@import '../assets/styles/partials/variables';
+
+h2 {
+    font-size: 3.5rem;
+    color: $light-green;
+}
+
+p {
+    color: $white;
+    font-size: 1.4rem;
+    text-align: start;
+}
 
 </style>
