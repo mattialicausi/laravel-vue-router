@@ -1,9 +1,11 @@
 <template>
     <header id="header">
         <div class="container d-flex h-100 align-items-center justify-content-between">
-            <div class="container-img-logo h-100 d-flex align-items-center">
+
+            <router-link class="container-img-logo h-100 d-flex align-items-center" to="/">
                 <img class="h-50" src="../../public/img/MattiaLiCausiwhi (3).svg" alt="img logo">
-            </div>
+            </router-link>
+
 
             <div id='menu' :class="hamburgerOpen == true ? 'rotate' : '' " @click="openHamburger()">
                 <div class='menu-line1' :class="hamburgerOpen == true ? 'rotate1' : '' "></div>
